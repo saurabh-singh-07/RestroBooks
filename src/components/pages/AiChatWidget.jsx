@@ -8,7 +8,7 @@ const quickPrompts = [
 ];
 
 export function AIChatWidget() {
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
     const [isExpanded, setIsExpanded] = useState(false)
     const [input, setInput] = useState("")
     const [messages, setMessages] = useState([
