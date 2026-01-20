@@ -42,34 +42,34 @@ export function AIInsights() {
   const getStyles = (type) => {
     switch (type) {
       case "warning":
-        return "border-warning/30 bg-warning/5";
+        return "border-red-500/30 bg-red-500/5";
       case "opportunity":
-        return "border-success/30 bg-success/5";
+        return "border-green-500/30 bg-green-500/5";
       case "tip":
-        return "border-primary/30 bg-primary/5";
+        return "border-amber-500/30 bg-amber-500/5";
       default:
-        return "border-primary/30 bg-primary/5";
+        return "border-blue-500/30 bg-blue-500/5";
     }
   };
 
   const getIconStyles = (type) => {
     switch (type) {
       case "warning":
-        return "bg-warning/20 text-warning";
+        return "bg-red-500/20 text-red-500";
       case "opportunity":
-        return "bg-success/20 text-success";
+        return "bg-green-500/20 text-green-500";
       case "tip":
-        return "bg-primary/20 text-primary";
+        return "bg-yellow-500/20 text-amber-500";
       default:
-        return "bg-primary/20 text-primary";
+        return "bg-blue-500/20 text-blue-500";
     }
   };
 
   return (
-    <div className="stat-card border bg-card">
+    <div className="stat-card border p-4 rounded-xl border-slate-600 bg-card">
       <div className="mb-6 flex items-center gap-2">
-        <Sparkles className="h-5 w-5 text-primary" />
-        <h3 className="font-display text-lg font-semibold text-foreground">
+        <Sparkles className="h-5 w-5 text-yellow-500" />
+        <h3 className=" text-lg font-semibold dark:text-slate-300">
           AI Insights
         </h3>
       </div>
@@ -95,12 +95,12 @@ export function AIInsights() {
                   <Icon className="h-4 w-4" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-medium text-foreground">{insight.title}</h4>
-                  <p className="mt-1 text-sm text-muted-foreground">
+                  <h4 className="font-medium dark:text-slate-300">{insight.title}</h4>
+                  <p className="mt-1 text-sm dark:text-gray-400">
                     {insight.description}
                   </p>
                   {insight.action && (
-                    <button className="mt-2 text-sm font-medium text-primary hover:underline">
+                    <button className="mt-2 text-sm font-medium text-yellow-500 hover:underline">
                       {insight.action} →
                     </button>
                   )}

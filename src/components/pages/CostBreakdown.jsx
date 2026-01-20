@@ -10,12 +10,12 @@ const data = [
 
 export function CostBreakdown() {
   return (
-    <div className="stat-card h-85 border bg-card">
+    <div className=" h-85 p-4 border rounded-xl border-slate-700 bg-white dark:bg-slate-900/50">
       <div className="mb-4">
-        <h3 className="font-display text-lg font-semibold text-foreground">
+        <h3 className=" text-lg font-semibold dark:text-slate-300">
           Cost Breakdown
         </h3>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm text-gray-600 dark:text-slate-400">
           Monthly expense distribution
         </p>
       </div>

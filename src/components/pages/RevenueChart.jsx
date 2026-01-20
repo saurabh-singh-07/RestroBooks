@@ -23,21 +23,21 @@ export function RevenueChart() {
     <div className="h-85 border border-slate-400 dark:border-slate-800 p-4 rounded-xl bg-slate-100 dark:bg-slate-900/50">
       <div className="mb-6 flex items-center justify-between">
         <div>
-          <h3 className="font-display text-lg font-semibold text-foreground">
+          <h3 className=" text-lg font-semibold text-slate-600 dark:text-slate-300">
             Weekly Overview
           </h3>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm  dark:text-slate-400">
             Revenue vs Expenses
           </p>
         </div>
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
             <div className="h-3 w-3 rounded-full bg-primary" />
-            <span className="text-sm text-muted-foreground">Revenue</span>
+            <span className="text-sm dark:text-slate-400">Revenue</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="h-3 w-3 rounded-full bg-chart-expenses" />
-            <span className="text-sm text-muted-foreground">Expenses</span>
+            <span className="text-sm dark:text-slate-400">Expenses</span>
           </div>
         </div>
       </div>

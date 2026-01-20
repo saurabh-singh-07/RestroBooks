@@ -56,17 +56,17 @@ const transactions = [
 
 export function RecentTransactions() {
   return (
-    <div className="stat-card border bg-card">
+    <div className="border border-slate-700 bg-gray-200  dark:bg-slate-900/80 p-4 rounded-xl">
       <div className="mb-6 flex items-center justify-between">
         <div>
-          <h3 className="font-display text-lg font-semibold text-foreground">
+          <h3 className=" text-lg font-semibold dark:text-slate-300 text-slate-700">
             Recent Transactions
           </h3>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm dark:text-slate-400">
             Auto-categorized by AI
           </p>
         </div>
-        <button className="text-sm font-medium text-primary hover:underline">
+        <button className="text-sm font-medium text-blue-500 hover:underline">
           View All
         </button>
       </div>
@@ -75,20 +75,20 @@ export function RecentTransactions() {
         {transactions.map((transaction) => (
           <div
             key={transaction.id}
-            className="flex items-center justify-between rounded-lg p-3 transition-colors hover:bg-secondary/50"
+            className="flex dark:text-gray-400 items-center justify-between rounded-lg p-3 transition-colors dark:hover:bg-slate-800 hover:bg-[#958f60a1]"
           >
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary">
-                <transaction.icon className="h-5 w-5 text-muted-foreground" />
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#8e8a706e]">
+                <transaction.icon className="h-5 w-5 text-[#2019076e] dark:text-[#eeeee86e]" />
               </div>
               <div>
-                <p className="font-medium text-foreground">{transaction.vendor}</p>
+                <p className="font-medium text-gray-800 dark:text-gray-300">{transaction.vendor}</p>
                 <div className="flex items-center gap-2">
-                  <span className="text-sm text-muted-foreground">
+                  <span className="text-sm ">
                     {transaction.category}
                   </span>
                   {transaction.aiCategory && (
-                    <span className="flex items-center gap-1 rounded-full bg-accent px-2 py-0.5 text-xs font-medium text-accent-foreground">
+                    <span className="flex items-center gap-1 rounded-full dark:bg-[#eeeee86e] bg-[#95957c6e] px-2 py-0.5 text-xs font-medium text-[#22220a6e] dark:text-[#3d3102c6]">
                       <Sparkles className="h-3 w-3" />
                       AI
                     </span>
@@ -100,13 +100,13 @@ export function RecentTransactions() {
               <p
                 className={cn(
                   "font-semibold",
-                  transaction.amount < 0 ? "text-destructive" : "text-success"
+                  transaction.amount < 0 ? "text-red-500" : "text-green-500"
                 )}
               >
                 {transaction.amount < 0 ? "-" : "+"}$
                 {Math.abs(transaction.amount).toLocaleString()}
               </p>
-              <p className="text-xs text-muted-foreground">{transaction.date}</p>
+              <p className="text-xs dark:text-slate-400">{transaction.date}</p>
             </div>
           </div>
         ))}
