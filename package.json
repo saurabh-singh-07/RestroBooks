@@ -2,7 +2,7 @@
   "name": "restrobooks",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://saurabh-singh-07.github.io/RestroBooks/",
+  "homepage": "https://saurabh-singh-07.github.io/RestroBooks",
   "type": "module",
   "scripts": {
     "dev": "vite",

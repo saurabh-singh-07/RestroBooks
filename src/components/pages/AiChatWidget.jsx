@@ -1,7 +1,5 @@
 import { Bot, Send, Maximize2, Sparkles, X } from "lucide-react";
 import { useState } from "react";
-import {Button} from '@/components/Ui/button'
-import {Input} from '@/components/Ui/input'
 
 const quickPrompts = [
     "What's my food cost this week ? ",
