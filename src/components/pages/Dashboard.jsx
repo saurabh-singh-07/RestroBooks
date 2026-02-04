@@ -4,6 +4,7 @@ import { RevenueChart } from "@/components/pages/RevenueChart";
 import { CostBreakdown } from "@/components/pages/CostBreakdown";
 import { RecentTransactions } from "@/components/pages/RecentTransactions";
 import { AIInsights } from "@/components/pages/AIInsights";
+
 const StatCardData = [
   {
     title : "Today's Revenue",

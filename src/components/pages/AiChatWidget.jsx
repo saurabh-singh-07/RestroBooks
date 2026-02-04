@@ -109,10 +109,10 @@ export function AIChatWidget() {
         {messages.map((message) => (
           <div
             key={message.id}
-            className={(
-              "flex",
-              message.role === "user" ? "justify-end" : "justify-start"
-            )}
+            className={
+              `flex
+              ${message.role === "user" ? "justify-end" : "justify-start"}`
+            }
           >
             <div
               className={
@@ -129,7 +129,7 @@ export function AIChatWidget() {
       </div>
 
       {/* Quick Prompts */}
-      {messages.length <= 2 && (
+      {messages.length <= 6 && (
         <div className="flex flex-wrap gap-2 border-t border-gray-400 p-3">
           {quickPrompts.map((prompt) => (
             <button
