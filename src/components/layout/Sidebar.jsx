@@ -11,7 +11,7 @@ const navItems = [
   { icon: Bot, label: "AI Assistant",  },
 ];
 function Sidebar({sideBarShow, setSideBarShow}) {
-    const [darkmode, setDarkmode] = useState(localStorage.getItem('theme') === "light");
+    const [darkmode, setDarkmode] = useState(localStorage.getItem('theme') === "dark");
   useEffect(()=>{
     if(darkmode){
       document.documentElement.classList.add('dark');
